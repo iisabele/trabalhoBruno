@@ -1,23 +1,72 @@
-# Compiled class file
-*.class
 
-# Log file
-*.log
+public class Livro {
+	String autor, titulo, genero, editora;
+	int anoPubli;
 
-# BlueJ files
-*.ctxt
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+	void Cadastrar(){
+		System.out.println("Cadastrando...");
+	}	
+	void Genero(){
+		System.out.println("Separando por categoria...");
+	}
+	public Livro(String tit, String aut, int ano){
+		titulo=tit;
+		autor=aut;
+		anoPubli=ano;
+	}
+}
+//outra classe
+import java.util.Random;
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+public class Biblioteca {
+	String livro, emprestimo, devolucao, cadastro, cadastrolivro;
+	Random ranom = new Random();
+	int livro(){
+		int i= random.nextInt(10);
+		if(i%2==0){
+			System.out.println("Livro disponivel");
+		}else{
+			System.out.println("Livro indisponivel");
+		}
+	return 0;
+	}	
+	void cadastro(){
+		System.out.println("Cadastrando novo aluno...");
+	}
+	public Biblioteca(String name){
+		String nome;
+		nome=name;
+	}
+}
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+//outra classe
+
+public class Usuario {
+	String nome, turma;
+	int frequencia, cpf, idade;
+	
+	void nome(){
+		System.out.println("Procurando nome...");
+	}
+	void turma(){
+		System.out.println("Adicionando turma a qual pertence ao cadastro");
+	}
+	public Usuario(int dadoprincipal){
+		cpf=dadoprincipal;
+	}
+}
+
+//main principal
+ 	public static void main(String[] args) {
+		Livro objeto = new Livro("A menina que roubava livros", "Markus Zusak", 2005);
+		Biblioteca a1 = new Biblioteca("Isaaaaa);		
+		Usuario pessoa1 = new Usuario (123.739.028-00);
+
+
+		System.out.println(objeto.titulo);
+		System.out.println(objeto.autor);
+		System.out.println(objeto.anoPubli);
+		System.out.println(a1.nome);
+		System.out.println(pessoa1.cpf);
+	}
